@@ -18,50 +18,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JHv-2h-b8e">
-                                <rect key="frame" x="54" y="378" width="307" height="201"/>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-I2-48p">
+                                <rect key="frame" x="53" y="347" width="307" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-I2-48p">
+                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atlanta, Georgia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzX-8C-tVK">
                                         <rect key="frame" x="0.0" y="0.0" width="307" height="201"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atlanta, Georgia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzX-8C-tVK">
-                                                <rect key="frame" x="0.0" y="0.0" width="307" height="201"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.25400368270000001" green="0.01180753403" blue="0.002293063353" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where is Morehouse College located?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlv-QO-8Iu">
-                                                <rect key="frame" x="0.0" y="0.0" width="307" height="201"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.25400368270000001" green="0.01180753403" blue="0.002293063353" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
+                                        <color key="backgroundColor" red="0.25400368270000001" green="0.01180753403" blue="0.002293063353" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.52030285779999996" green="0.024186632400000001" blue="0.0046971264480000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where is Morehouse College located?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlv-QO-8Iu">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.25400368270000001" green="0.01180753403" blue="0.002293063353" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.52030285779999996" green="0.024186632400000001" blue="0.0046971264480000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.52030285779999996" green="0.024186632400000001" blue="0.0046971264480000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IQO-w5-Rvi" appends="YES" id="Lva-tH-YzG"/>
+                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLW-PX-xbJ">
+                                <rect key="frame" x="82" y="634" width="249" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25400368270000001" green="0.01180753403" blue="0.002293063353" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Atlanta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqW-G0-Xj9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0On-iO-EBC">
+                                <rect key="frame" x="82" y="692" width="249" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25400368270000001" green="0.01180753403" blue="0.002293063353" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Washington DC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fel-h6-3ZN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLB-RW-J5N">
+                                <rect key="frame" x="82" y="750" width="249" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25400368270000001" green="0.01180753403" blue="0.002293063353" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="New Orleans">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZ9-QR-YzO"/>
+                                    <outletCollection property="gestureRecognizers" destination="IQO-w5-Rvi" appends="YES" id="d0D-Tk-K0M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Button1" destination="VLW-PX-xbJ" id="PnJ-Mv-vpN"/>
+                        <outlet property="Button2" destination="0On-iO-EBC" id="ApC-EB-ac4"/>
+                        <outlet property="Button3" destination="CLB-RW-J5N" id="piC-K9-bkL"/>
                         <outlet property="answer" destination="kzX-8C-tVK" id="q4F-Bh-K0E"/>
+                        <outlet property="card" destination="MdN-I2-48p" id="Qtq-ag-vWM"/>
                         <outlet property="question" destination="jlv-QO-8Iu" id="UOG-YF-eEa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="IQO-w5-Rvi">
                     <connections>
-                        <action selector="tappedFlashCard:" destination="BYZ-38-t0r" id="cNp-2Y-Y6v"/>
+                        <action selector="tappedFlashCard:" destination="BYZ-38-t0r" id="IXf-A4-MaS"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
