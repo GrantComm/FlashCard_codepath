@@ -6,7 +6,6 @@
 Simple Flashcard app that allows user to tap flashcard to reveal or select answer below the card. 
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
 <img src="flashcard_walkthrough.gif" width=200><br>
 
