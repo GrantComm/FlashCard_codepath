@@ -13,8 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answer: UILabel!
     
-    @IBOutlet weak var question: UILabel!
     
+    @IBOutlet weak var Question: UILabel!
     @IBOutlet weak var card: UIView!
     
     
@@ -46,17 +46,17 @@ class ViewController: UIViewController {
 
 
     @IBAction func tappedFlashCard(_ sender: Any) {
-        if(question.isHidden != true){
-            question.isHidden = true;
+        if(Question.isHidden != true){
+            Question.isHidden = true;
             print("Tapped Question")
         }else{
-            question.isHidden = false;
+            Question.isHidden = false;
         }
     }
     
     
     @IBAction func button1Clicked(_ sender: Any) {
-        question.isHidden = true
+        Question.isHidden = true
     }
     
     
@@ -66,6 +66,20 @@ class ViewController: UIViewController {
     
     @IBAction func button3Clicked(_ sender: Any) {
         Button3.isHidden = true
+    }
+    
+    func newCard(question: String, answer: String, choice1: String, choice2: String){
+        Question.text = question
+        Button1.setTitle(answer, for: .normal)
+        Button2.setTitle(choice1, for: .normal)
+        Button3.setTitle(choice2, for: .normal)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationViewController = navigationController.topViewController as! creationViewController
+        
+        creationViewController.flashCardController = self
     }
     
     
