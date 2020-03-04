@@ -103,7 +103,6 @@
                                 </state>
                                 <connections>
                                     <action selector="button3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZ9-QR-YzO"/>
-                                    <outletCollection property="gestureRecognizers" destination="IQO-w5-Rvi" appends="YES" id="d0D-Tk-K0M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,11 +127,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Answer" destination="kzX-8C-tVK" id="ORU-uC-Y7v"/>
                         <outlet property="Button1" destination="VLW-PX-xbJ" id="PnJ-Mv-vpN"/>
                         <outlet property="Button2" destination="0On-iO-EBC" id="ApC-EB-ac4"/>
                         <outlet property="Button3" destination="CLB-RW-J5N" id="piC-K9-bkL"/>
                         <outlet property="Question" destination="jlv-QO-8Iu" id="UFg-JF-rca"/>
-                        <outlet property="answer" destination="kzX-8C-tVK" id="q4F-Bh-K0E"/>
                         <outlet property="card" destination="MdN-I2-48p" id="Qtq-ag-vWM"/>
                     </connections>
                 </viewController>
@@ -148,7 +147,6 @@
         <!--Creation View Controller-->
         <scene sceneID="xJy-Ra-lFC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrt-iS-kWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ToI-fg-Tip" customClass="creationViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q1C-tZ-WEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -247,6 +245,7 @@
                         <outlet property="newQuestion" destination="FpK-lS-ghl" id="gSP-Kc-8KD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrt-iS-kWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1739.1304347826087" y="119.86607142857142"/>
         </scene>
