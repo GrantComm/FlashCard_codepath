@@ -30,12 +30,21 @@ class creationViewController: UIViewController{
     }
     
     @IBAction func submitClicked(_ sender: Any) {
+        if(newQuestion.text == " " || newAnswer.text == " " || newChoice1.text == " " || newChoice2.text == " "){
+            let message = "All fields must be filled"
+            let alert1 = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alert1.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert1, animated: true, completion: nil)
+            dismiss(animated: false)
+
+        }else{
         let nquestion = newQuestion.text
         let nanswer = newAnswer.text
         let nchoice1 = newChoice1.text
         let nchoice2 = newChoice2.text
         flashCardController.newCard(question: nquestion!, answer: nanswer!, choice1: nchoice1!, choice2: nchoice2!)
         dismiss(animated: true)
+        }
     }
 
 }
