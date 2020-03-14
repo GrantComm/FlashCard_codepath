@@ -10,7 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
+    struct Flashcard{
+        var q: String;
+        var a: String;
+        var c1: String;
+        var c2: String;
+    };
 
     @IBOutlet weak var Answer: UILabel!
     @IBOutlet weak var Question: UILabel!
@@ -18,10 +23,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var Button1: UIButton!
     @IBOutlet weak var Button2: UIButton!
     @IBOutlet weak var Button3: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var previousButton: UIButton!
+    
+    
+    var flashcards = [Flashcard]()
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        readDisk()
+        if flashcards.count == 0{
+        newCard(question: "Where is Morehouse College Located?", answer: "Atlanta", choice1: "New Orleans", choice2: "Washington DC")
+        }else{
+            updateLabels()
+            updateCurrAndPrev()
+        }
+        
         card.layer.cornerRadius = 20.0
         card.layer.shadowRadius = 15.0
         card.layer.shadowOpacity = 0.2
@@ -69,12 +88,16 @@ class ViewController: UIViewController {
     }
     
     func newCard(question: String, answer: String, choice1: String, choice2: String){
-        Question.text = question
-        Button1.setTitle(answer, for: .normal)
-        Button2.setTitle(choice1, for: .normal)
-        Button3.setTitle(choice2, for: .normal)
-        Answer.text = answer
-        
+        let flashcard = Flashcard(q: question, a: answer, c1: choice1, c2: choice2)
+        Question.text = flashcard.q
+        Button1.setTitle(flashcard.a, for: .normal)
+        Button2.setTitle(flashcard.c1, for: .normal)
+        Button3.setTitle(flashcard.c2, for: .normal)
+        Answer.text = flashcard.a
+        flashcards.append(flashcard)
+        currentIndex = flashcards.count - 1
+        updateCurrAndPrev()
+        savetoDisk()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,4 +110,59 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func nextCardClicked(_ sender: Any) {
+        currentIndex += 1
+        updateLabels()
+        updateCurrAndPrev()
+    }
+    
+    
+    @IBAction func previousCardClicked(_ sender: Any) {
+        currentIndex -= 1
+        updateLabels()
+        updateCurrAndPrev()
+    }
+    
+    func updateCurrAndPrev(){
+        if currentIndex == flashcards.count - 1{
+            nextButton.isEnabled = false
+        }else{
+            nextButton.isEnabled = true
+        }
+        if currentIndex == 0{
+            previousButton.isEnabled = false
+        }else{
+            previousButton.isEnabled = true
+        }
+    }
+    
+    func updateLabels(){
+        let currentFlashcard = flashcards[currentIndex]
+        Question.text = currentFlashcard.q
+        Button1.setTitle(currentFlashcard.a, for: .normal)
+        Button2.setTitle(currentFlashcard.c1, for: .normal)
+        Button3.setTitle(currentFlashcard.c2, for: .normal)
+        Answer.text = currentFlashcard.a
+    }
+    
+    func savetoDisk(){
+        let dictionaryArray = flashcards.map { (card) -> [String: String] in
+            return ["question": card.q, "answer": card.a, "choice1": card.c1, "choice2": card.c2]
+        }
+        
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
+    }
+    
+    
+    func readDisk(){
+            if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String:String]]{
+                
+                let savedCards = dictionaryArray.map { dictionary -> Flashcard in
+                    return Flashcard(q: dictionary["question"]!, a: dictionary["answer"]!, c1: dictionary["choice1"]!, c2: dictionary["choice2"]!)
+                }
+                flashcards.append(contentsOf: savedCards)
+            
+            }
+    
+    }
 }
