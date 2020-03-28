@@ -95,6 +95,23 @@ class ViewController: UIViewController {
         })
     }
     
+    func animateOut1(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        }) { finished in
+            self.updateLabels()
+            self.animateIn1()
+        }
+    }
+    
+    func animateIn1(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
+    }
+    
     
     @IBAction func button1Clicked(_ sender: Any) {
         Question.isHidden = true
@@ -147,6 +164,7 @@ class ViewController: UIViewController {
         currentIndex -= 1
         updateLabels()
         updateCurrAndPrev()
+        animateOut1()
     }
     
     func updateCurrAndPrev(){
