@@ -58,16 +58,41 @@ class ViewController: UIViewController {
         Button3.layer.cornerRadius = 20.0
         Button3.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 
+
     }
 
 
     @IBAction func tappedFlashCard(_ sender: Any) {
+        flipCard()
+    }
+    
+    func flipCard(){
         if(Question.isHidden != true){
-            Question.isHidden = true;
-            print("Tapped Question")
+            UIView.transition(with: card, duration: 0.3, options: .transitionCurlUp, animations: {
+                    self.Question.isHidden = true})
+                print("Tapped Question")
         }else{
-            Question.isHidden = false;
+            UIView.transition(with: card, duration: 0.3, options: .transitionCurlDown, animations: {
+                self.Question.isHidden = false})
         }
+    }
+    
+    
+    func animateOut(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }) { finished in
+            self.updateLabels()
+            self.animateIn()
+        }
+    }
+    
+    func animateIn(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
     }
     
     
@@ -114,6 +139,7 @@ class ViewController: UIViewController {
         currentIndex += 1
         updateLabels()
         updateCurrAndPrev()
+        animateOut()
     }
     
     
